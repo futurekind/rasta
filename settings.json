@@ -6,6 +6,10 @@
         "main": {
             "src": "src/scss/main.scss",
             "dist": "dist/css/main.css"
+        },
+        "rasta": {
+            "src": "src/scss/rasta/_rasta.scss",
+            "dist": "scss/rasta/_rasta.scss"
         }
     },
 
