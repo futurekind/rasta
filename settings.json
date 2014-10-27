@@ -1,28 +1,15 @@
 {
     "css": {
         "scss": {
-            "src": "src/css/**/*.scss"
+            "src": "src/scss/**/*.scss"
         },
         "main": {
-            "src": "src/css/main.scss",
+            "src": "src/scss/main.scss",
             "dist": "dist/css/main.css"
-        }
-    },
-
-    "js": {
-        "modules": {
-            "src": "src/js/modules/*.js"
         },
-        "main": {
-            "src": "src/js/main.js",
-            "dist": "dist/tmp/js/main.js"
-        },
-        "vendor": {
-            "src": [],
-            "dist": "dist/tmp/js/vendor.js"
-        },
-        "all": {
-            "dist": "dist/js/all.js"
+        "rasta": {
+            "src": "src/scss/rasta/_rasta.scss",
+            "dist": "scss/rasta/_rasta.scss"
         }
     },
 

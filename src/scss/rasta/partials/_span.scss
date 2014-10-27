@@ -1,0 +1,34 @@
+$cols: map-get($rasta, columns);
+$gutter: map-get($rasta, gutter);
+
+@function gutter() { 
+    @return 1 / $cols * $gutter / 2;
+}
+
+@function width($count, $nest, $edge) {
+    $offset: 2 * gutter();
+
+    @if $edge != "" {
+        $offset: gutter();
+    }
+
+    @return percentage((1 / $nest * $count) - $offset);
+}
+
+@mixin span($count, $nest: $cols, $edge: "") {
+    width: width($count, $nest, $edge);
+
+    @if $edge == "first" {
+        padding-left: 0;
+    } @else {
+        padding-left: percentage(gutter());
+    }
+
+    @if $edge == "last" {
+        padding-right: 0;
+    } @else {
+        padding-right: percentage(gutter());
+    }
+
+    float: left;
+}

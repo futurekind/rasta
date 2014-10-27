@@ -1,0 +1,82 @@
+@import "rasta/rasta";
+
+.container {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: #eee;
+    @include container(980px);
+}
+
+.col {
+
+    &__body {
+        padding-top: 1em;
+        padding-bottom: 1em;
+        background-color: #ccc;
+        text-align: center;
+    }
+}
+
+.col--1 {
+    @include span(1);
+}
+
+.col--2 {
+    @include span(2);
+}
+
+.col--3 {
+    @include span(3);
+}
+
+.col--4 {
+    @include span(4);
+}
+
+.col--5 {
+    @include span(5);
+}
+
+.col--6 {
+    @include span(6);
+}
+
+.col--7 {
+    @include span(7);
+}
+
+.col--8 {
+    @include span(8);
+}
+
+.col--9 {
+    @include span(9);
+}
+
+.col--10 {
+    @include span(10);
+}
+
+.col--11 {
+    @include span(11);
+}
+
+.col--12 {
+    @include span(12);
+}
+
+.push--3 {
+    @include push(4);
+}
+
+.sub--3--first {
+    @include span(3, 9, first);
+}
+
+.sub--3 {
+    @include span(3, 9);
+}
+
+.sub--3--last {
+    @include span(3, 9, last);
+}

@@ -51,12 +51,29 @@ module.exports = function(grunt) {
             }
         },
 
+        concat: {
+            options: {
+                banner: "<%= banner %>\n"
+            },
+            main: {
+                src: ['<%= settings.css.rasta.src %>'],
+                dest: '<%= settings.css.rasta.dist %>'
+            },
+        },
+
         copy: {
             webroot: {
                 expand: true,
                 cwd: 'src/webroot',
                 src: '**',
                 dest: 'dist'
+            },
+
+            rasta: {
+                expand: true,
+                cwd: 'src/scss/rasta/partials',
+                src: '**',
+                dest: 'scss/rasta/partials'
             }
         },
 
@@ -70,7 +87,7 @@ module.exports = function(grunt) {
         },
 
         clean: {
-            dist: 'dist',
+            dist: ['dist', 'scss'],
             build: [
                 'dist/tmp',
                 'dist/css/*.map', 
@@ -119,7 +136,7 @@ module.exports = function(grunt) {
 
             webroot: {
                 files: 'src/webroot/**',
-                tasks: 'copy',
+                tasks: 'copy:webroot',
                 options: {
                     livereload: true
                 }
@@ -136,8 +153,8 @@ module.exports = function(grunt) {
 
     });
 
-    grunt.registerTask('build', ['clean', 'sass', 'autoprefixer', 'cssmin', 'copy', 'assemble:build', 'clean:build']);
-    grunt.registerTask('compile', ['sass', 'autoprefixer', 'copy', 'assemble:dev']);
+    grunt.registerTask('build', ['clean', 'sass', 'autoprefixer', 'cssmin', 'concat', 'copy', 'assemble:build', 'clean:build']);
+    grunt.registerTask('compile', ['sass', 'autoprefixer', 'copy:webroot', 'assemble:dev']);
     grunt.registerTask('server', ['connect', 'watch']);
     grunt.registerTask('default', ['compile' ,'server']);
 };

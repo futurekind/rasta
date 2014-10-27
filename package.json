@@ -1,9 +1,9 @@
 {
-  "name": "rasta-gridsystem",
-  "version": "0.0.0",
-  "repository" : { 
-    "type" : "git", 
-    "url" : "https://github.com/futurekind/launcher.git"
+  "name": "rasta-grid",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/futurekind/rasta.git"
   },
   "dependencies": {
     "assemble": "^0.4.42",
@@ -14,8 +14,6 @@
     "grunt-contrib-connect": "^0.8.0",
     "grunt-contrib-copy": "^0.7.0",
     "grunt-contrib-cssmin": "^0.10.0",
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-uglify": "^0.6.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-sass": "^0.16.0",
     "load-grunt-tasks": "^0.6.0"
