@@ -51,6 +51,12 @@ module.exports = function(grunt) {
             }
         },
 
+        concat: {
+            options: {
+                banner: '<%= banner %>'
+            }
+        },
+
         copy: {
             webroot: {
                 expand: true,
