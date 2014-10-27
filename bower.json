@@ -1,18 +1,25 @@
 {
-  "name": "rasta-gridsystem",
-  "version": "0.0.0",
-  "homepage": "",
+  "name": "rasta-grid",
+  "version": "0.1.0",
+  "homepage": "https://github.com/futurekind/rasta",
   "authors": [
     "Fabian Trinler <f.trinler@gmail.com>"
   ],
-  "license": "",
-  "private": true,
+  "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "js/vendor",
     "test",
-    "tests"
+    "tests",
+    "src"
+  ],
+  "description": "A simple grid-system for SASS which is libsass ready",
+  "keywords": [
+    "sass",
+    "grid",
+    "libsass",
+    "node-sass"
   ]
 }
